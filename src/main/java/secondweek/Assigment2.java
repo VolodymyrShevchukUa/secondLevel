@@ -26,8 +26,8 @@ public class Assigment2 {
             assigment2.tableCreator = new LongTableCreator(assigment2.max, assigment2.min, assigment2.increment);
         }
         assigment2.tableCreator.createTable();
-
     }
+
     private void initProperties() {
         Properties properties = new Properties();
         try {
