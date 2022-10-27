@@ -1,6 +1,7 @@
 package secondweek;
 
 public abstract class TableCreator  {
+
     protected String max ;
     protected String min ;
     protected String inc ;
