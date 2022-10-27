@@ -23,7 +23,7 @@ public class Assigment2 {
     private TableCreator tableCreator;
 
     public static void main(String[] args) {
-        logger.info("sss");
+        logger.info("Something changes");
         Assigment2 assigment2 = new Assigment2();
         assigment2.initProperties();
         if ("double".equals(System.getProperty("type"))) {
