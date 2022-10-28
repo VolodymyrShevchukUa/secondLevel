@@ -2,6 +2,7 @@ package secondweek;
 
 public abstract class TableCreator  {
 
+
     protected String max ;
     protected String min ;
     protected String inc ;
@@ -12,5 +13,6 @@ public abstract class TableCreator  {
         this.inc = inc;
     }
 
-    public abstract void createTable();
+    public abstract String createTable();
+
 }

@@ -6,7 +6,7 @@ public class LongTableCreator extends TableCreator {
     }
 
     @Override
-    public void createTable() {
+    public String createTable() {
         StringBuilder stringBuilder = new StringBuilder();
         long inc = Long.parseLong(this.inc);
         long max = Long.parseLong(this.max);
@@ -17,6 +17,6 @@ public class LongTableCreator extends TableCreator {
             }
             stringBuilder.append("\n");
         }
-        Assigment2.logger.info("The table :".concat("\n".concat(stringBuilder.toString())));
+        return stringBuilder.toString();
     }
 }

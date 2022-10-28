@@ -31,7 +31,8 @@ public class Assigment2 {
         } else {
             assigment2.tableCreator = new LongTableCreator(assigment2.max, assigment2.min, assigment2.increment);
         }
-        assigment2.tableCreator.createTable();
+        System.out.println(assigment2.tableCreator.createTable());
+        logger.info("The table :".concat("\n".concat(assigment2.tableCreator.createTable())));
     }
 
     private void initProperties() {
