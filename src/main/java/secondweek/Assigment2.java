@@ -3,10 +3,10 @@ package secondweek;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.Properties;
 
 /**
@@ -14,7 +14,7 @@ import java.util.Properties;
  */
 public class Assigment2 {
 
-    public static Logger logger = LoggerFactory.getLogger(Assigment2.class);
+    static Logger logger = LoggerFactory.getLogger(Assigment2.class);
 
     private String max;
     private String min;
@@ -31,18 +31,16 @@ public class Assigment2 {
         } else {
             assigment2.tableCreator = new LongTableCreator(assigment2.max, assigment2.min, assigment2.increment);
         }
-        assigment2.tableCreator.createTable();
-        // something's changed
+        System.out.println(assigment2.tableCreator.createTable());
+        logger.info("The table :".concat("\n".concat(assigment2.tableCreator.createTable())));
     }
 
     private void initProperties() {
         Properties properties = new Properties();
-        try {
-            InputStream inputStream = new FileInputStream(("src/main/resources/config.properties"));
+        try (InputStream inputStream = Files.newInputStream(Path.of("src/main/resources/config.properties"))){
             properties.load(inputStream);
-            inputStream.close();
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            throw new MyOwnException("config not exist",e);
         }
         max = properties.getProperty("max");
         min = properties.getProperty("min");
