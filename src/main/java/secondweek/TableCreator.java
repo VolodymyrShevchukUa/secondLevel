@@ -1,13 +1,14 @@
 package secondweek;
 
-public abstract class TableCreator  {
+public abstract class TableCreator {
 
 
-    protected String max ;
-    protected String min ;
-    protected String inc ;
+    protected Number max;
+    protected Number min;
+    protected Number inc;
 
-    protected TableCreator(String max, String min, String inc) {
+
+    protected TableCreator(Number max, Number min, Number inc) {
         this.max = max;
         this.min = min;
         this.inc = inc;
