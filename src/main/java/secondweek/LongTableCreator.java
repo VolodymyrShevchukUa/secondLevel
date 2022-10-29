@@ -1,22 +1,52 @@
 package secondweek;
 
+import java.math.BigInteger;
+
 public class LongTableCreator extends TableCreator {
-    protected LongTableCreator(String max, String min, String increment) {
-        super(max, min, increment);
+
+    int offsetCof;
+    long max;
+    long min;
+    long inc;
+    private final StringBuilder stringBuilder;
+
+
+
+    protected LongTableCreator(Number max, Number min, Number inc) {
+        super(max, min, inc);
+        this.max = super.max.longValue();
+        this.min = super.min.longValue();
+        this.inc = super.inc.longValue();
+        offsetCof = super.max.toString().length()*2;
+        stringBuilder = new StringBuilder();
     }
 
     @Override
     public String createTable() {
-        StringBuilder stringBuilder = new StringBuilder();
-        long inc = Long.parseLong(this.inc);
-        long max = Long.parseLong(this.max);
-        long min = Long.parseLong(this.min);
-        for (; min <= max; min += inc) {
-            for (int j = 1; j <= max; j += inc) {
-                stringBuilder.append(String.format("%5d", min * j));
+        long[] numbers = getNumbers(max, min, inc);
+        for (long row : numbers) {
+            stringBuilder.append("\n").append(row).append("|");
+            for (long column : numbers) {
+                stringBuilder.append(String.format("%".concat(offsetCof+"").concat("d"),
+                        BigInteger.valueOf(column).multiply(BigInteger.valueOf(row))));
             }
             stringBuilder.append("\n");
         }
         return stringBuilder.toString();
+    }
+
+    public long[] getNumbers(long max,long min,long inc) {
+        int arraySize = (int) ((max - min) / inc) + 1;
+        long[] longs = new long[arraySize];
+        StringBuilder separator = new StringBuilder();
+        min -= inc;
+        stringBuilder.append(" ".repeat(super.max.toString().length()-1));
+        for(int i = 0;i<arraySize;i++){
+            longs[i] = min += inc;
+            stringBuilder.append(String.format("%".concat(offsetCof+"").concat("d"),BigInteger.valueOf(longs[i])));
+            separator.append("__________________");
+        }
+        stringBuilder.append("\n").append(separator);
+        return longs;
     }
 }
