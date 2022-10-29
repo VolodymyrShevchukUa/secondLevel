@@ -25,19 +25,20 @@ public class Assigment2 {
     public static void main(String[] args) {
         logger.info("Something changes");
         Assigment2 assigment2 = new Assigment2();
-        assigment2.initProperties();
-        if ("double".equals(System.getProperty("type"))) {
-            assigment2.tableCreator = new DoubleTableCreator(assigment2.max, assigment2.min, assigment2.increment);
+        assigment2.initProperties(("src/main/resources/config.properties"));
+        if ("double".equals(System.getProperty("type"))||"float".equals(System.getProperty("type"))) {
+            assigment2.tableCreator = new DoubleTableCreator(Double.parseDouble(assigment2.max) ,
+                    Double.parseDouble(assigment2.min), Double.parseDouble(assigment2.increment));
         } else {
-            assigment2.tableCreator = new LongTableCreator(assigment2.max, assigment2.min, assigment2.increment);
+            assigment2.tableCreator = new LongTableCreator(Long.parseLong(assigment2.max) ,
+                    Long.parseLong(assigment2.min), Long.parseLong(assigment2.increment));
         }
-        System.out.println(assigment2.tableCreator.createTable());
         logger.info("The table :".concat("\n".concat(assigment2.tableCreator.createTable())));
     }
 
-    private void initProperties() {
+    public void initProperties(String path) {
         Properties properties = new Properties();
-        try (InputStream inputStream = Files.newInputStream(Path.of("src/main/resources/config.properties"))){
+        try (InputStream inputStream = Files.newInputStream(Path.of(path))){
             properties.load(inputStream);
         } catch (IOException e) {
             throw new MyOwnException("config not exist",e);

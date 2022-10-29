@@ -1,20 +1,16 @@
 package secondweek;
 
-import static org.junit.Assert.assertTrue;
-
 import org.junit.Test;
+
+import static org.junit.Assert.assertThrows;
 
 /**
  * Unit test for simple App.
  */
-public class AppTest 
-{
-    /**
-     * Rigorous Test :-)
-     */
+public class AppTest {
     @Test
-    public void shouldAnswerWithTrue()
-    {
-        assertTrue( true );
+    public void initPropertiesTest() {
+        Assigment2 assigment2 = new Assigment2();
+        assertThrows(MyOwnException.class, () -> assigment2.initProperties("sdsdsdsa"));
     }
 }
