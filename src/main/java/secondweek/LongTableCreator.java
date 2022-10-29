@@ -1,11 +1,14 @@
 package secondweek;
 
+import java.math.BigInteger;
+
 public class LongTableCreator extends TableCreator {
 
+    int offsetCof;
     long max;
     long min;
     long inc;
-    private StringBuilder stringBuilder;
+    private final StringBuilder stringBuilder;
 
 
 
@@ -14,16 +17,18 @@ public class LongTableCreator extends TableCreator {
         this.max = super.max.longValue();
         this.min = super.min.longValue();
         this.inc = super.inc.longValue();
+        offsetCof = super.max.toString().length()*2;
+        stringBuilder = new StringBuilder();
     }
 
     @Override
     public String createTable() {
-        stringBuilder = new StringBuilder();
         long[] numbers = getNumbers(max, min, inc);
         for (long row : numbers) {
             stringBuilder.append("\n").append(row).append("|");
             for (long column : numbers) {
-                stringBuilder.append(String.format("%5d", row * column));
+                stringBuilder.append(String.format("%".concat(offsetCof+"").concat("d"),
+                        BigInteger.valueOf(column).multiply(BigInteger.valueOf(row))));
             }
             stringBuilder.append("\n");
         }
@@ -35,11 +40,11 @@ public class LongTableCreator extends TableCreator {
         long[] longs = new long[arraySize];
         StringBuilder separator = new StringBuilder();
         min -= inc;
-            stringBuilder.append("  ");
+        stringBuilder.append(" ".repeat(super.max.toString().length()-1));
         for(int i = 0;i<arraySize;i++){
             longs[i] = min += inc;
-            stringBuilder.append(String.format("%5d" ,longs[i]));
-            separator.append("______");
+            stringBuilder.append(String.format("%".concat(offsetCof+"").concat("d"),BigInteger.valueOf(longs[i])));
+            separator.append("__________________");
         }
         stringBuilder.append("\n").append(separator);
         return longs;
