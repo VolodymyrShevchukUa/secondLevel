@@ -29,7 +29,7 @@ class DoubleTableCreatorTest {
     DoubleTableCreator doubleTableCreator = new DoubleTableCreator(10,1,1.5);
         String table = doubleTableCreator.createTable();
         Assertions.assertEquals(expectedResult.replace(" ","").replace("\n","")
-                        .replace("|","").replace("_","")
+                        .replace("|","").replace("_","").replace(",",".")
                 ,table.replace(" ","").replace("\n","")
                         .replace("|","").replace("_",""));
     }
