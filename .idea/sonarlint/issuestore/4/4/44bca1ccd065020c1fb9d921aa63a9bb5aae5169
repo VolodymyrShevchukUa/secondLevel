@@ -1,0 +1,16 @@
+
+—
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ä×“á
+P
+java:S1854
+"5Remove this useless assignment to local variable "b".(µ¨Ñ¥ýÿÿÿÿ
+P
+java:S1854	"5Remove this useless assignment to local variable "a".(ÜÅº¨ýÿÿÿÿ
+A
+java:S1481	"&Remove this unused "a" local variable.(ÜÅº¨ýÿÿÿÿ
+A
+java:S1481
+"&Remove this unused "b" local variable.(µ¨Ñ¥ýÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(ãž¸Öøÿÿÿÿ
+B
+java:S1144"'Remove this unused private "sr" method.(Àƒæ™øÿÿÿÿ
