@@ -23,27 +23,29 @@ public class DoubleTableCreator extends TableCreator{
 // changes sdsadas
     @Override
     public String createTable() {
-        double[] numbers = getNumbers(max, min, inc);
-        for (double row : numbers) {
-            stringBuilder.append("\n").append(row).append("|");
-            for (double column : numbers) {
-                stringBuilder.append(String.format("%15f", BigDecimal.valueOf(row).multiply(BigDecimal.valueOf(column))));
+        BigDecimal[] numbers = getNumbers(max, min, inc);
+        for (BigDecimal row : numbers) {
+            stringBuilder.append("\n").append(String.format("%15f",row)).append("|");
+            for (BigDecimal column : numbers) {
+                stringBuilder.append(String.format("%15f", row.multiply(column)));
             }
             stringBuilder.append("\n");
         }
         return stringBuilder.toString();
     }
 
-    public double[] getNumbers(double max,double min,double inc) {
+    public BigDecimal[] getNumbers(double max, double min, double inc) {
         int arraySize = (int)((max - min) / inc) + 1;
-        double[] doubles = new double[arraySize];
+        BigDecimal minimal;
+        BigDecimal[] doubles = new BigDecimal[arraySize];
         StringBuilder separator = new StringBuilder();
-        min -= inc;
-        stringBuilder.append("    ");
+        minimal = BigDecimal.valueOf(min).subtract(BigDecimal.valueOf(inc));
+        stringBuilder.append(" ".repeat(Math.max(0, offsetCof * 2)));
         for(int i = 0;i<arraySize;i++){
-            doubles[i] = min += inc;
-            stringBuilder.append(String.format("%15f" ,BigDecimal.valueOf(doubles[i])));
-            separator.append("________________");
+            doubles[i] = minimal.add(BigDecimal.valueOf(inc));
+            minimal = doubles[i];
+            stringBuilder.append(String.format("%15f" ,doubles[i]));
+            separator.append("__________________________________");
         }
         stringBuilder.append("\n").append(separator);
         return doubles;

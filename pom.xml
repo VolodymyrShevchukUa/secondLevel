@@ -46,7 +46,7 @@
         <profile>
             <id>shadePL</id>
             <activation>
-                <activeByDefault>true</activeByDefault>
+                <activeByDefault>false</activeByDefault>
             </activation>
             <build>
                 <resources>
@@ -94,6 +94,9 @@
 
         <profile>
             <id>assembly</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
             <build>
                 <plugins>
                     <plugin>

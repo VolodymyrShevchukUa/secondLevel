@@ -17,7 +17,7 @@ public class LongTableCreator extends TableCreator {
         this.max = super.max.longValue();
         this.min = super.min.longValue();
         this.inc = super.inc.longValue();
-        offsetCof = super.max.toString().length()*2;
+        offsetCof = (int) (super.max.toString().length()*Math.sqrt(max.toString().length())+3);
         stringBuilder = new StringBuilder();
     }
 
@@ -40,7 +40,7 @@ public class LongTableCreator extends TableCreator {
         long[] longs = new long[arraySize];
         StringBuilder separator = new StringBuilder();
         min -= inc;
-        stringBuilder.append(" ".repeat(super.max.toString().length()-1));
+        stringBuilder.append(" ".repeat((super.max.toString().length()-1)));
         for(int i = 0;i<arraySize;i++){
             longs[i] = min += inc;
             stringBuilder.append(String.format("%".concat(offsetCof+"").concat("d"),BigInteger.valueOf(longs[i])));
