@@ -24,6 +24,7 @@ public class Assigment2 {
     private TableCreator tableCreator;
 
     public static void main(String[] args) {
+        // Something changes
         Assigment2 assigment2 = new Assigment2();
         assigment2.initProperties(("src/main/resources/config.properties"));
         if ("double".equals(System.getProperty("type"))||"float".equals(System.getProperty("type"))) {
