@@ -20,7 +20,7 @@ public class DoubleTableCreator extends TableCreator{
         stringBuilder = new StringBuilder();
 
     }
-// changes sdsadas
+//s
     @Override
     public String createTable() {
         BigDecimal[] numbers = getNumbers(max, min, inc);
