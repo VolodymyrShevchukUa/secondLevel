@@ -13,6 +13,7 @@ import java.util.Properties;
  * Hello world!
  */
 public class Assigment2 {
+    //git
 
     static Logger logger = LoggerFactory.getLogger(Assigment2.class);
 

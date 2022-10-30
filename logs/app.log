@@ -1,0 +1,166 @@
+2022-10-30 16:41:08,869 ERROR secondweek.Assigment2 [main] I don`t know if i make well
+secondweek.MyOwnException: config not exist
+	at secondweek.Assigment2.initProperties(Assigment2.java:44)
+	at secondweek.AppTest.lambda$initPropertiesTest$0(AppTest.java:14)
+	at org.junit.Assert.assertThrows(Assert.java:1001)
+	at org.junit.Assert.assertThrows(Assert.java:981)
+	at secondweek.AppTest.initPropertiesTest(AppTest.java:14)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54)
+Caused by: java.nio.file.NoSuchFileException: sdsdsdsa
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:85)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108)
+	at java.base/sun.nio.fs.WindowsFileSystemProvider.newByteChannel(WindowsFileSystemProvider.java:236)
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:380)
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:432)
+	at java.base/java.nio.file.spi.FileSystemProvider.newInputStream(FileSystemProvider.java:422)
+	at java.base/java.nio.file.Files.newInputStream(Files.java:160)
+	at secondweek.Assigment2.initProperties(Assigment2.java:41)
+	... 29 common frames omitted
+2022-10-30 16:45:13,331 ERROR secondweek.Assigment2 [main] I don`t know if i make well
+secondweek.MyOwnException: config not exist
+	at secondweek.Assigment2.initProperties(Assigment2.java:44)
+	at secondweek.AppTest.lambda$initPropertiesTest$0(AppTest.java:14)
+	at org.junit.Assert.assertThrows(Assert.java:1001)
+	at org.junit.Assert.assertThrows(Assert.java:981)
+	at secondweek.AppTest.initPropertiesTest(AppTest.java:14)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54)
+Caused by: java.nio.file.NoSuchFileException: sdsdsdsa
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:85)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108)
+	at java.base/sun.nio.fs.WindowsFileSystemProvider.newByteChannel(WindowsFileSystemProvider.java:236)
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:380)
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:432)
+	at java.base/java.nio.file.spi.FileSystemProvider.newInputStream(FileSystemProvider.java:422)
+	at java.base/java.nio.file.Files.newInputStream(Files.java:160)
+	at secondweek.Assigment2.initProperties(Assigment2.java:41)
+	... 29 common frames omitted
+2022-10-30 16:45:33,789 INFO secondweek.Assigment2 [main] Something changes
+2022-10-30 16:45:33,806 INFO secondweek.Assigment2 [main] The table :
+                       1,000000       2,546547       4,093093       5,639640       7,186186       8,732733
+____________________________________________________________________________________________________________________________________________________________________________________________________________
+       1,000000|       1,000000       2,546547       4,093093       5,639640       7,186186       8,732733
+
+       2,546547|       2,546547       6,484899      10,423252      14,361605      18,299958      22,238311
+
+       4,093093|       4,093093      10,423252      16,753411      23,083570      29,413729      35,743888
+
+       5,639640|       5,639640      14,361605      23,083570      31,805536      40,527501      49,249466
+
+       7,186186|       7,186186      18,299958      29,413729      40,527501      51,641272      62,755044
+
+       8,732733|       8,732733      22,238311      35,743888      49,249466      62,755044      76,260622
+
+2022-10-30 16:46:21,508 INFO secondweek.Assigment2 [main] Something changes
+2022-10-30 16:46:21,523 INFO secondweek.Assigment2 [main] The table :
+                       1,000000       2,546547       4,093093       5,639640       7,186186       8,732733
+____________________________________________________________________________________________________________________________________________________________________________________________________________
+       1,000000|       1,000000       2,546547       4,093093       5,639640       7,186186       8,732733
+
+       2,546547|       2,546547       6,484899      10,423252      14,361605      18,299958      22,238311
+
+       4,093093|       4,093093      10,423252      16,753411      23,083570      29,413729      35,743888
+
+       5,639640|       5,639640      14,361605      23,083570      31,805536      40,527501      49,249466
+
+       7,186186|       7,186186      18,299958      29,413729      40,527501      51,641272      62,755044
+
+       8,732733|       8,732733      22,238311      35,743888      49,249466      62,755044      76,260622
+
+2022-10-30 16:47:40,782 INFO secondweek.Assigment2 [main] Something changes
+2022-10-30 16:47:40,799 INFO secondweek.Assigment2 [main] The table :
+                       1,000000       2,546547       4,093093       5,639640       7,186186       8,732733
+____________________________________________________________________________________________________________________________________________________________________________________________________________
+       1,000000|       1,000000       2,546547       4,093093       5,639640       7,186186       8,732733
+
+       2,546547|       2,546547       6,484899      10,423252      14,361605      18,299958      22,238311
+
+       4,093093|       4,093093      10,423252      16,753411      23,083570      29,413729      35,743888
+
+       5,639640|       5,639640      14,361605      23,083570      31,805536      40,527501      49,249466
+
+       7,186186|       7,186186      18,299958      29,413729      40,527501      51,641272      62,755044
+
+       8,732733|       8,732733      22,238311      35,743888      49,249466      62,755044      76,260622
+
+2022-10-30 16:47:52,949 INFO secondweek.Assigment2 [main] Something changes
+2022-10-30 16:47:52,964 INFO secondweek.Assigment2 [main] The table :
+                       1,000000       2,546547       4,093093       5,639640       7,186186       8,732733
+____________________________________________________________________________________________________________________________________________________________________________________________________________
+       1,000000|       1,000000       2,546547       4,093093       5,639640       7,186186       8,732733
+
+       2,546547|       2,546547       6,484899      10,423252      14,361605      18,299958      22,238311
+
+       4,093093|       4,093093      10,423252      16,753411      23,083570      29,413729      35,743888
+
+       5,639640|       5,639640      14,361605      23,083570      31,805536      40,527501      49,249466
+
+       7,186186|       7,186186      18,299958      29,413729      40,527501      51,641272      62,755044
+
+       8,732733|       8,732733      22,238311      35,743888      49,249466      62,755044      76,260622
+
+2022-10-30 16:48:38,372 INFO secondweek.Assigment2 [main] Something changes
+2022-10-30 16:48:38,388 INFO secondweek.Assigment2 [main] The table :
+                       1,000000       2,546547       4,093093       5,639640       7,186186       8,732733
+____________________________________________________________________________________________________________________________________________________________________________________________________________
+       1,000000|       1,000000       2,546547       4,093093       5,639640       7,186186       8,732733
+
+       2,546547|       2,546547       6,484899      10,423252      14,361605      18,299958      22,238311
+
+       4,093093|       4,093093      10,423252      16,753411      23,083570      29,413729      35,743888
+
+       5,639640|       5,639640      14,361605      23,083570      31,805536      40,527501      49,249466
+
+       7,186186|       7,186186      18,299958      29,413729      40,527501      51,641272      62,755044
+
+       8,732733|       8,732733      22,238311      35,743888      49,249466      62,755044      76,260622
+
