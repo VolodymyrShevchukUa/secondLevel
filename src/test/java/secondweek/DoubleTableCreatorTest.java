@@ -24,15 +24,7 @@ class DoubleTableCreatorTest {
                     "       8,500000|       8,500000      21,250000      34,000000      46,750000      59,500000      72,250000      85,000000\n" +
                     "\n" +
                     "      10,000000|      10,000000      25,000000      40,000000      55,000000      70,000000      85,000000     100,000000";
-    @Test
-    void testDoubleCreateTable(){
-    DoubleTableCreator doubleTableCreator = new DoubleTableCreator(10,1,1.5);
-        String table = doubleTableCreator.createTable();
-        Assertions.assertEquals(expectedResult.replace(" ","").replace("\n","")
-                        .replace("|","").replace("_","").replace(",",".")
-                ,table.replace(" ","").replace("\n","")
-                        .replace("|","").replace("_",""));
-    }
+
     @Test
     void checkGetNumbers() {
         DoubleTableCreator doubleTableCreator = new DoubleTableCreator(10,1,1.5);
