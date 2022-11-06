@@ -47,6 +47,7 @@ public class Assigment2 {
         max = properties.getProperty("max");
         min = properties.getProperty("min");
         increment = properties.getProperty("increment");
+
     }
 
 }

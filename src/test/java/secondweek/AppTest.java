@@ -13,4 +13,5 @@ public class AppTest {
         Assigment2 assigment2 = new Assigment2();
         assertThrows(MyOwnException.class, () -> assigment2.initProperties("sdsdsdsa"));
     }
+    //
 }

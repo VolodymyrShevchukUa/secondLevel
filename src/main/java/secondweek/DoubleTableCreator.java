@@ -1,6 +1,7 @@
 package secondweek;
 
 import java.math.BigDecimal;
+import java.util.Properties;
 
 public class DoubleTableCreator extends TableCreator{
 
